@@ -1,6 +1,7 @@
 # React Series Challenge
 
-React proficiency challenge please create a Gimpy Client that matches to the best of your capacity what is described in the deliverables section.
+React proficiency challenge. Using the provided libraries and templates create a Gimpy Client that matches to the best of your capacity what is described in the deliverables section.
+
 
 #### What we are expecting from you is:
 - Use [Giphy API](https://developers.giphy.com/docs)
@@ -29,7 +30,7 @@ Important. Constantly commit your code.
 
 - Unit Testing
   - Create tests for your application
-  - Coverage must be at least 20%
+  - Coverage must be 20% or more
 
 ## Restrictions
 - Don’t include extra dependencies (lodash, ramda).
