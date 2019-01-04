@@ -1,6 +1,6 @@
 # React Series Challenge
 
-The output of this challenge is to create a Giphy Client. You will be applying the concepts that you learned along the course.
+React proficiency challenge please create a Gimpy Client that matches to the best of your capacity what is described in the deliverables section.
 
 #### What we are expecting from you is:
 - Use [Giphy API](https://developers.giphy.com/docs)
@@ -29,7 +29,7 @@ Important. Constantly commit your code.
 
 - Unit Testing
   - Create tests for your application
-  - Coverage must be at least 70%
+  - Coverage must be at least 20%
 
 ## Restrictions
 - Don’t include extra dependencies (lodash, ramda).
@@ -50,7 +50,7 @@ Important. Constantly commit your code.
   - Redux State List
   - Redux State Search
 5. Unit Testing
-  - Coverage 70%
+  - Coverage 20%
 6. Styling
   - Use styled components
 7. Include the slides in your commit, for presenting purposes.
