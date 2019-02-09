@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import homeReducer from 'containers/Home/reducer';
+import gyphyProvider from 'containers/GiphyProvider/reducer';
 
 export default combineReducers({
-  homeReducer
+  gyphyProvider
 });
