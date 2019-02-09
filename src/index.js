@@ -4,10 +4,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 
 import App from './containers/App';
-import configureStore from './store';
+import store from './store';
 import registerServiceWorker from './registerServiceWorker';
-
-const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
