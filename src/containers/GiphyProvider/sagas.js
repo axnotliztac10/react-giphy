@@ -1,21 +1,40 @@
 import { put, takeLatest, call } from 'redux-saga/effects';
 
-import { getTrending } from 'api/giphy';
 import {
-  GET_TRENDING_INIT
+  getTrending,
+  search
+} from 'api/giphy';
+import {
+  GET_TRENDING_INIT, SEARCH_INIT
 } from './constants';
-import { getTrendingSuccess } from './actions';
+import {
+  getTrendingSuccess,
+  getTrendingFail,
+  searchSuccess,
+  searchFail
+} from './actions';
 
 export function* getTrendingInitSaga({ payload }) {
   try {
-    const trendingList = yield call(getTrending);
+    const { data } = yield call(getTrending);
 
-    yield put(getTrendingSuccess(trendingList));
+    yield put(getTrendingSuccess(data));
   } catch(err) {
+    yield put(getTrendingFail(err));
+  }
+}
 
+export function* searchInitSaga({ payload }) {
+  try {
+    const { data } = yield call(search, payload);
+
+    yield put(searchSuccess(data));
+  } catch(err) {
+    yield put(searchFail(err));
   }
 }
 
 export default function* giphySaga() {
   yield takeLatest(GET_TRENDING_INIT, getTrendingInitSaga);
+  yield takeLatest(SEARCH_INIT, searchInitSaga);
 }

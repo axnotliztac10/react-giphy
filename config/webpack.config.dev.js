@@ -91,6 +91,7 @@ module.exports = {
       containers: path.resolve(__dirname, '../src/containers'),
       components: path.resolve(__dirname, '../src/components'),
       api: path.resolve(__dirname, '../src/api'),
+      images: path.resolve(__dirname, '../src/images'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).

@@ -5,6 +5,10 @@ import {
 
 const initialState = {
   trendingList: [],
+  pagination: {
+    count: 6,
+    offset: 0
+  },
   error: null
 };
 

@@ -6,10 +6,12 @@ import TrendingSection from 'components/TrendingSection';
 
 export default class Home extends React.PureComponent {
   render() {
+    const { trendingList, onSearch } = this.props;
+
     return (
       <Layout heading="React Challenge">
-        <TrendingSection />
-        <Search />
+        <TrendingSection trendings={trendingList} />
+        <Search onSearch={onSearch} />
       </Layout>
     );
   }

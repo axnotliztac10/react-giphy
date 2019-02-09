@@ -5,6 +5,8 @@ import { Button } from 'rebass';
 import Card from 'components/Card';
 
 export default class Search extends React.PureComponent {
+  searchInput = React.createRef();
+
   render() {
     const Label = styled.label`
       font-size: 1.4rem;
@@ -23,8 +25,11 @@ export default class Search extends React.PureComponent {
     return (
       <Card p={2} px={3} my={4}>
         <Label>Search: </Label>
-        <Input type="text" placeholder="Ex. Gatitos" />
-        <Button bg="magenta">Go</Button>
+        <Input ref={this.searchInput} type="text" placeholder="Ex. Gatitos" />
+        <Button
+          bg="magenta"
+          onClick={() => this.props.onSearch(this.searchInput.current.value)}
+        >Go</Button>
       </Card>
     );
   }
