@@ -2,6 +2,6 @@ import React from 'react';
 
 export default class Home extends React.PureComponent {
   render() {
-    return <div />
+    return <div>App is running</div>
   }
 }

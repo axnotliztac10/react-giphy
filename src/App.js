@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Home from 'containers/Home';
 
-export function App() {
+export default function App() {
   return (
     <Switch>
       <Redirect exact from="/" to="/home" />
