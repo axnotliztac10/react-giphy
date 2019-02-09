@@ -3,29 +3,29 @@ import React from 'react';
 import GiphyCard from 'components/GiphyCard';
 import { Text, Box, Flex } from 'rebass';
 
-export default class TrendingSection extends React.PureComponent {
-  renderTrending = (trending, index) => {
+export default class SearchResultsSection extends React.PureComponent {
+  renderResult = (result, index) => {
     return (
       <GiphyCard
-        giphy={trending}
+        giphy={result}
         key= {index}
       />
     );
   }
 
   render() {
-    const { trendings } = this.props;
+    const { results } = this.props;
 
     return (
       <Box my={4}>
-        <Text fontSize={22}>Trendings</Text>
+        <Text fontSize={22}>Results: </Text>
         <Flex
           flexDirection="row"
           justifyContent="center"
           alignItems="flex-start"
           flexWrap="wrap"
         >
-          {trendings.map(this.renderTrending)}
+          {results.map(this.renderResult)}
         </Flex>
       </Box>
     );

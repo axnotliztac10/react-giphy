@@ -20,15 +20,19 @@ export const withGiphy = WrappedComponent => {
     render() {
       const {
         trendingList,
-        pagination,
-        error
+        searchList,
+        searchPagination,
+        trendingError,
+        searchError
       } = this.props;
 
       const props = {
         onSearch: this.handleOnSearch,
         trendingList,
-        pagination,
-        error
+        searchList,
+        searchPagination,
+        trendingError,
+        searchError
       };
 
       return <WrappedComponent {...props} />
