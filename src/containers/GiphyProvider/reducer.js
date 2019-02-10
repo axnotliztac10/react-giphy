@@ -46,7 +46,7 @@ export default (state = initialState, { type, payload }) => {
     case GET_TRENDING_SUCCESS:
       return {
         ...state,
-        trendingList: setFavorites([...payload], state.favorites)
+        trendingList: setFavorites(payload, state.favorites)
       };
     case GET_TRENDING_FAIL:
       return {
@@ -89,8 +89,8 @@ export default (state = initialState, { type, payload }) => {
       return {
         ...state,
         favorites: newFavorites,
-        trendingList: setFavorites([...state.trendingList], newFavorites),
-        searchList: setFavorites([...state.searchList], newFavorites)
+        trendingList: setFavorites(state.trendingList, newFavorites),
+        searchList: setFavorites(state.searchList, newFavorites)
       };
     case SEARCH_FAVORITES:
       const filtered = state.favorites.map(favorite => {

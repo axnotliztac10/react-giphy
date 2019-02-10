@@ -1,5 +1,6 @@
 import React from 'react';
 import { compose } from 'redux';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import {
@@ -11,6 +12,19 @@ import {
 
 export const withGiphy = WrappedComponent => {
   return class Giphy extends React.PureComponent {
+    static propTypes = {
+      trendingList: PropTypes.array,
+      searchList: PropTypes.array,
+      searchPagination: PropTypes.object,
+      trendingError: PropTypes.object,
+      searchError: PropTypes.object,
+      favorites: PropTypes.array,
+      getTrending: PropTypes.func,
+      search: PropTypes.func,
+      searchFavorites: PropTypes.func,
+      addRemoveFavorite: PropTypes.func
+    }
+
     componentDidMount() {
       this.props.getTrending();
     }

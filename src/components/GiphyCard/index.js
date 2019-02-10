@@ -6,7 +6,7 @@ import addButton from 'images/add.png';
 import addedButton from 'images/added.png';
 import loader from 'images/loader.svg';
 
-export default class GiphyCard extends React.PureComponent {
+export default class GiphyCard extends React.Component {
   state = {
     loaded: false
   }
@@ -20,6 +20,7 @@ export default class GiphyCard extends React.PureComponent {
   render() {
     const { loaded } = this.state;
     const { giphy, onAddRemoveFavorite } = this.props;
+
     const Img = () => (
       <img
         alt={giphy.title}
