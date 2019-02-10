@@ -16,9 +16,13 @@ export default class SearchResultsSection extends React.PureComponent {
   render() {
     const { results } = this.props;
 
+    if (!results.length) {
+      return null;
+    }
+
     return (
       <Box my={4}>
-        <Text fontSize={22}>Results: </Text>
+        <Text textAlign="center" fontSize={22}>Results: </Text>
         <Flex
           flexDirection="row"
           justifyContent="center"

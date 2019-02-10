@@ -5,7 +5,8 @@ import {
   search
 } from 'api/giphy';
 import {
-  GET_TRENDING_INIT, SEARCH_INIT
+  GET_TRENDING_INIT,
+  SEARCH_INIT
 } from './constants';
 import {
   getTrendingSuccess,

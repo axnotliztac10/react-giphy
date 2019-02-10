@@ -18,7 +18,7 @@ export default class TrendingSection extends React.PureComponent {
 
     return (
       <Box my={4}>
-        <Text fontSize={22}>Trendings</Text>
+        <Text textAlign="center" fontSize={25}>Trendings</Text>
         <Flex
           flexDirection="row"
           justifyContent="center"
