@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> should render correctly 1`] = `
+<Fragment>
+  <GlobalStyleComponent />
+  <Styled(styled.div)
+    alignItems="center"
+    flexDirection="column"
+    justifyContent="center"
+  >
+    <styled.div
+      p={30}
+      width="100%"
+    >
+      <Styled(styled.div)
+        justifyContent="space-between"
+      >
+        <Styled(Styled(styled.div))
+          as="h2"
+          fontSize={28}
+          fontWeight="bold"
+          m={0}
+        >
+          foobar
+        </Styled(Styled(styled.div))>
+        <Styled(styled.div)>
+          <Link
+            replace={false}
+            to="/home"
+          >
+            Home
+          </Link>
+          <styled.div
+            ml={10}
+          >
+            <Link
+              replace={false}
+              to="favorites"
+            >
+              Favorites
+            </Link>
+          </styled.div>
+        </Styled(styled.div)>
+      </Styled(styled.div)>
+      <div />
+    </styled.div>
+  </Styled(styled.div)>
+</Fragment>
+`;

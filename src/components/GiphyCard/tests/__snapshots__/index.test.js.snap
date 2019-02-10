@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render correctly 1`] = `
+<Card
+  mx={2}
+  my={3}
+  p={2}
+  width={
+    Array [
+      1,
+      0.3333333333333333,
+      0.25,
+    ]
+  }
+>
+  <Img />
+  <img
+    alt="loading"
+    src="loader.svg"
+  />
+  <Styled(styled.div)
+    as="button"
+    bg="transparent"
+    border={0}
+    borderRadius={4}
+    color="white"
+    fontSize="inherit"
+    fontWeight="bold"
+    m={0}
+    onClick={[Function]}
+    p={0}
+    px={3}
+    py={2}
+    variant="outline"
+    width={1}
+  >
+    <Styled(styled.div)
+      color="black"
+      pb={2}
+    />
+    <Styled(styled.div)
+      as="img"
+      m={0}
+      src="add.png"
+      width={0.25}
+    />
+  </Styled(styled.div)>
+</Card>
+`;

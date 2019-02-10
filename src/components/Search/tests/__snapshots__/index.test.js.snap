@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render correctly 1`] = `
+<Card
+  my={4}
+  p={2}
+  px={3}
+>
+  <form>
+    <styled.label>
+      Search: 
+    </styled.label>
+    <Field
+      component={[Function]}
+      name="search"
+    />
+    <Styled(styled.div)
+      as="button"
+      bg="magenta"
+      border={0}
+      borderRadius={4}
+      color="white"
+      fontSize="inherit"
+      fontWeight="bold"
+      m={0}
+      px={3}
+      py={2}
+    >
+      Go
+    </Styled(styled.div)>
+  </form>
+</Card>
+`;

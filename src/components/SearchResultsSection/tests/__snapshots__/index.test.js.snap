@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchResultsSection /> should render correctly 1`] = `
+<styled.div
+  my={4}
+>
+  <Styled(styled.div)
+    fontSize={22}
+    textAlign="center"
+  >
+    Results:
+  </Styled(styled.div)>
+  <Styled(styled.div)
+    alignItems="flex-start"
+    flexDirection="row"
+    flexWrap="wrap"
+    justifyContent="center"
+  >
+    <GiphyCard
+      giphy={Object {}}
+      key="0"
+      onAddRemoveFavorite={[Function]}
+    />
+    <styled.div
+      width={1}
+    >
+      <Styled(styled.div)
+        as="a"
+        color="blue"
+        fontSize={30}
+        onClick={[Function]}
+      >
+        Load more
+      </Styled(styled.div)>
+    </styled.div>
+  </Styled(styled.div)>
+</styled.div>
+`;

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render correctly 1`] = `
+<styled.div
+  my={4}
+>
+  <Styled(styled.div)
+    fontSize={25}
+    textAlign="center"
+  >
+    My favorites
+  </Styled(styled.div)>
+  <Styled(styled.div)
+    alignItems="flex-start"
+    flexDirection="row"
+    flexWrap="wrap"
+    justifyContent="center"
+  >
+    <GiphyCard
+      giphy={
+        Object {
+          "hideOnSearchFavorites": false,
+        }
+      }
+      key="1"
+      onAddRemoveFavorite={[Function]}
+    />
+  </Styled(styled.div)>
+</styled.div>
+`;
+
+exports[`<FavoritesSection /> should render correctly 1`] = `
+<styled.div
+  my={4}
+>
+  <Styled(styled.div)
+    fontSize={25}
+    textAlign="center"
+  >
+    My favorites
+  </Styled(styled.div)>
+  <Styled(styled.div)
+    alignItems="flex-start"
+    flexDirection="row"
+    flexWrap="wrap"
+    justifyContent="center"
+  >
+    <GiphyCard
+      giphy={
+        Object {
+          "hideOnSearchFavorites": false,
+        }
+      }
+      key="1"
+      onAddRemoveFavorite={[Function]}
+    />
+  </Styled(styled.div)>
+</styled.div>
+`;

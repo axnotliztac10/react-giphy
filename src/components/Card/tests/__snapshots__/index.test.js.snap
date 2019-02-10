@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render correctly 1`] = `
+<Styled(styled.div)
+  bg="#fff"
+  borderRadius={8}
+  boxShadow="0 2px 16px rgba(0, 0, 0, 0.25)"
+>
+  <div />
+</Styled(styled.div)>
+`;

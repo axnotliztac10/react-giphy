@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrendingSection /> should render correctly 1`] = `
+<styled.div
+  my={4}
+>
+  <Styled(styled.div)
+    fontSize={25}
+    textAlign="center"
+  >
+    Trendings
+  </Styled(styled.div)>
+  <Styled(styled.div)
+    alignItems="flex-start"
+    flexDirection="row"
+    flexWrap="wrap"
+    justifyContent="center"
+  />
+</styled.div>
+`;
