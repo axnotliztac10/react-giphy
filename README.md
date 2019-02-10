@@ -57,3 +57,6 @@ Important. Constantly commit your code.
 7. Include the slides in your commit, for presenting purposes.
   
  Wizeline react-series-challenge.
+
+## Presentation
+https://drive.google.com/open?id=1qIXMUH7LIbVN3Qqyh8bLOTrPRciQ12pZ3X1ZXv5NECM
