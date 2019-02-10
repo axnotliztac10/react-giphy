@@ -7,11 +7,15 @@ import Search from 'components/Search';
 
 export class Favorites extends React.PureComponent {
   render() {
-    const { onSearch, favorites, onAddRemoveFavorite } = this.props;
+    const {
+      favorites,
+      onAddRemoveFavorite,
+      onSearchFavorites
+    } = this.props;
 
     return (
       <Layout heading="Favorites">
-        <Search onSearch={onSearch} />
+        <Search onSearch={onSearchFavorites} />
         <FavoritesSection favorites={favorites} onAddRemoveFavorite={onAddRemoveFavorite} />
       </Layout>
     );

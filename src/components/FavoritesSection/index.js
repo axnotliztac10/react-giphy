@@ -7,13 +7,17 @@ export default class FavoritesSection extends React.PureComponent {
   renderFavorite = (favorite, index) => {
     const { onAddRemoveFavorite } = this.props;
 
-    return (
-      <GiphyCard
-        giphy={favorite}
-        key= {index}
-        onAddRemoveFavorite={onAddRemoveFavorite}
-      />
-    );
+    if (!favorite.hideOnSearchFavorites === true) {
+      return (
+        <GiphyCard
+          giphy={favorite}
+          key= {index}
+          onAddRemoveFavorite={onAddRemoveFavorite}
+        />
+      );
+    }
+
+    return null;
   }
 
   render() {

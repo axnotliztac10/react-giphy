@@ -3,7 +3,8 @@ import {
   GET_TRENDING_FAIL,
   SEARCH_SUCCESS,
   SEARCH_FAIL,
-  ADD_REMOVE_FAVORITE
+  ADD_REMOVE_FAVORITE,
+  SEARCH_FAVORITES
 } from './constants';
 
 const initialState = {
@@ -22,6 +23,8 @@ const addRemoveFavoriteState = (selected, favorites) => {
   const filtered = favorites.filter(favorite => selected.id !== favorite.id);
 
   if (favorites.length === filtered.length) {
+    selected.isFavorite = true;
+
     return [...favorites, selected];
   } else {
     return filtered;
@@ -67,6 +70,21 @@ export default (state = initialState, { type, payload }) => {
         favorites: newFavorites,
         trendingList: setFavorites([...state.trendingList], newFavorites),
         searchList: setFavorites([...state.searchList], newFavorites)
+      };
+    case SEARCH_FAVORITES:
+      const filtered = state.favorites.map(favorite => {
+        favorite.hideOnSearchFavorites = undefined;
+
+        if (payload && !favorite.title.includes(payload)) {
+          favorite.hideOnSearchFavorites = true;
+        }
+
+        return favorite;
+      });
+
+      return {
+        ...state,
+        favorites: filtered
       };
     default:
       return state;

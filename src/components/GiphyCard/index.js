@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Button } from 'rebass';
+import { Image, Button, Text } from 'rebass';
 
 import Card from 'components/Card';
 import addButton from 'images/add.png';
@@ -21,6 +21,7 @@ export default function GiphyCard({ giphy, onAddRemoveFavorite }) {
         bg="transparent"
         onClick={() => onAddRemoveFavorite(giphy)}
       >
+        <Text pb={2} color="black">{giphy.title}</Text>
         {!giphy.isFavorite && <Image src={addButton} width={1/4} />}
         {giphy.isFavorite && <Image src={addedButton} width={1/4} />}
       </Button>
