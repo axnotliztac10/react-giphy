@@ -15,7 +15,7 @@ import {
   searchFail
 } from './actions';
 
-export function* getTrendingInitSaga({ payload }) {
+export function* getTrendingInitSaga() {
   try {
     const { data } = yield call(getTrending);
 

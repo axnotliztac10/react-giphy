@@ -5,7 +5,7 @@ import Card from 'components/Card';
 import addButton from 'images/add.png';
 import addedButton from 'images/added.png';
 
-export default function GiphyCard({ giphy, added }) {
+export default function GiphyCard({ giphy, onAddRemoveFavorite }) {
   return (
     <Card
       p={2}
@@ -18,9 +18,11 @@ export default function GiphyCard({ giphy, added }) {
         p={0}
         width={1}
         variant="outline"
-        bg="transparent">
-        {!added && <Image src={addButton} width={1/4} />}
-        {added && <Image src={addedButton} width={1/4} />}
+        bg="transparent"
+        onClick={() => onAddRemoveFavorite(giphy)}
+      >
+        {!giphy.isFavorite && <Image src={addButton} width={1/4} />}
+        {giphy.isFavorite && <Image src={addedButton} width={1/4} />}
       </Button>
     </Card>
   );

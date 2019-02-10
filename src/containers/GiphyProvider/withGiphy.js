@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 
 import {
   getTrendingInit,
-  searchInit
+  searchInit,
+  addRemoveFavorite
 } from './actions';
 
 export const withGiphy = WrappedComponent => {
@@ -15,7 +16,11 @@ export const withGiphy = WrappedComponent => {
 
     handleOnSearch = (search) => {
       this.props.search(search);
-    }  
+    }
+
+    handleOnAddRemoveFavorite = (favorite) => {
+      this.props.addRemoveFavorite(favorite);
+    }
 
     render() {
       const {
@@ -23,16 +28,19 @@ export const withGiphy = WrappedComponent => {
         searchList,
         searchPagination,
         trendingError,
-        searchError
+        searchError,
+        favorites
       } = this.props;
 
       const props = {
         onSearch: this.handleOnSearch,
+        onAddRemoveFavorite: this.handleOnAddRemoveFavorite,
         trendingList,
         searchList,
         searchPagination,
         trendingError,
-        searchError
+        searchError,
+        favorites
       };
 
       return <WrappedComponent {...props} />
@@ -43,7 +51,8 @@ export const withGiphy = WrappedComponent => {
 export const mapStateToProps = state => ({ ...state.gyphyProvider });
 export const mapDispatchToProps = dispatch => ({
   getTrending: () => dispatch(getTrendingInit()),
-  search: (search) => dispatch(searchInit(search))
+  search: (search) => dispatch(searchInit(search)),
+  addRemoveFavorite: (favorite) => dispatch(addRemoveFavorite(favorite))
 });
 
 export default compose(

@@ -4,7 +4,8 @@ import {
   GET_TRENDING_FAIL,
   SEARCH_INIT,
   SEARCH_SUCCESS,
-  SEARCH_FAIL
+  SEARCH_FAIL,
+  ADD_REMOVE_FAVORITE
 } from './constants';
 
 export const getTrendingInit = payload => {
@@ -45,6 +46,13 @@ export const searchSuccess = payload => {
 export const searchFail = payload => {
   return {
     type: SEARCH_FAIL,
+    payload
+  };
+}
+
+export const addRemoveFavorite = payload => {
+  return {
+    type: ADD_REMOVE_FAVORITE,
     payload
   };
 }

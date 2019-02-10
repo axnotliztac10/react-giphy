@@ -11,14 +11,15 @@ export class Home extends React.PureComponent {
     const {
       onSearch,
       trendingList,
-      searchList
+      searchList,
+      onAddRemoveFavorite
     } = this.props;
 
     return (
       <Layout heading="React Challenge">
-        <TrendingSection trendings={trendingList} />
+        <TrendingSection trendings={trendingList} onAddRemoveFavorite={onAddRemoveFavorite} />
         <Search onSearch={onSearch} />
-        <SearchResultsSection results={searchList} />
+        <SearchResultsSection results={searchList} onAddRemoveFavorite={onAddRemoveFavorite} />
       </Layout>
     );
   }

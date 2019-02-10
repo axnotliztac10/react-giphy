@@ -3,13 +3,13 @@ import React from 'react';
 import GiphyCard from 'components/GiphyCard';
 import { Text, Box, Flex } from 'rebass';
 
-export default class TrendingSection extends React.PureComponent {
-  renderTrending = (trending, index) => {
+export default class FavoritesSection extends React.PureComponent {
+  renderFavorite = (favorite, index) => {
     const { onAddRemoveFavorite } = this.props;
 
     return (
       <GiphyCard
-        giphy={trending}
+        giphy={favorite}
         key= {index}
         onAddRemoveFavorite={onAddRemoveFavorite}
       />
@@ -17,18 +17,18 @@ export default class TrendingSection extends React.PureComponent {
   }
 
   render() {
-    const { trendings } = this.props;
+    const { favorites } = this.props;
 
     return (
       <Box my={4}>
-        <Text textAlign="center" fontSize={25}>Trendings</Text>
+        <Text textAlign="center" fontSize={25}>My favorites</Text>
         <Flex
           flexDirection="row"
           justifyContent="center"
           alignItems="flex-start"
           flexWrap="wrap"
         >
-          {trendings.map(this.renderTrending)}
+          {favorites.map(this.renderFavorite)}
         </Flex>
       </Box>
     );

@@ -5,10 +5,13 @@ import { Text, Box, Flex } from 'rebass';
 
 export default class SearchResultsSection extends React.PureComponent {
   renderResult = (result, index) => {
+    const { onAddRemoveFavorite } = this.props;
+
     return (
       <GiphyCard
         giphy={result}
         key= {index}
+        onAddRemoveFavorite={onAddRemoveFavorite}
       />
     );
   }
