@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<withGiphy /> should render correctly 1`] = `
+<Component
+  favorites={Array []}
+  onAddRemoveFavorite={[Function]}
+  onSearch={[Function]}
+  onSearchFavorites={[Function]}
+  searchError={Object {}}
+  searchList={Array []}
+  searchPagination={Object {}}
+  trendingError={Object {}}
+  trendingList={Array []}
+/>
+`;

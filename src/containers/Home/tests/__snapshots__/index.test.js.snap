@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render correctly 1`] = `
+<Layout
+  heading="React Challenge"
+>
+  <TrendingSection
+    onAddRemoveFavorite={[Function]}
+    trendings={Array []}
+  />
+  <ReduxForm
+    destroyOnUnmount={true}
+    enableReinitialize={false}
+    forceUnregisterOnUnmount={false}
+    form="search"
+    getFormState={[Function]}
+    keepDirtyOnReinitialize={false}
+    onSearch={[Function]}
+    persistentSubmitErrors={false}
+    pure={true}
+    shouldAsyncValidate={[Function]}
+    shouldError={[Function]}
+    shouldValidate={[Function]}
+    shouldWarn={[Function]}
+    touchOnBlur={true}
+    touchOnChange={false}
+    updateUnregisteredFields={false}
+  />
+  <SearchResultsSection
+    onAddRemoveFavorite={[Function]}
+    onLoadMore={[Function]}
+    results={Array []}
+  />
+</Layout>
+`;
