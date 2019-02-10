@@ -94,6 +94,10 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
+      containers: path.resolve(__dirname, '../src/containers'),
+      components: path.resolve(__dirname, '../src/components'),
+      api: path.resolve(__dirname, '../src/api'),
+      images: path.resolve(__dirname, '../src/images'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -146,11 +150,12 @@ module.exports = {
           // Process JS with Babel.
           {
             test: /\.(js|jsx|mjs)$/,
-            include: paths.appSrc,
+            include: [
+              paths.appSrc
+            ],
             loader: require.resolve('babel-loader'),
             options: {
-              
-              compact: true,
+              compact: false,
             },
           },
           // The notation here is somewhat confusing.

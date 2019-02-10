@@ -13,7 +13,7 @@ export default function GiphyCard({ giphy, onAddRemoveFavorite }) {
       mx={2}
       width={[1, 1/3, 1/4]}
     >
-      <Image width={1} src={giphy.images.downsizedMedium.url} />
+      <Image width={1} src={giphy.images.downsized_medium.url} />
       <Button
         p={0}
         width={1}

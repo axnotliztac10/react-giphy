@@ -1,5 +1,4 @@
 import 'isomorphic-fetch';
-import camelcaseKeys from 'camelcase-keys';
 
 /**
  * Parses the JSON returned by a network request
@@ -15,7 +14,7 @@ function parseJSON(response) {
 
   if (isJsonResponse(response)) {
     return response.json()
-      .then((json) => camelcaseKeys(json, { deep: true }));
+      .then(json => json);
   }
 
   return response.text();
