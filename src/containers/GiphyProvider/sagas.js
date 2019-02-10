@@ -26,7 +26,7 @@ export function* getTrendingInitSaga({ payload }) {
 
 export function* searchInitSaga({ payload }) {
   try {
-    const { data, pagination } = yield call(search, payload);
+    const { data, pagination } = yield call(search, payload.search);
 
     yield put(searchSuccess({
       data,

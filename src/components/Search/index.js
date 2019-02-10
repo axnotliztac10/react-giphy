@@ -1,10 +1,11 @@
 import React from 'react';
+import { Field, reduxForm } from 'redux-form'
 import styled from 'styled-components';
 import { Button } from 'rebass';
 
 import Card from 'components/Card';
 
-export default class Search extends React.PureComponent {
+export class Search extends React.PureComponent {
   searchInput = React.createRef();
 
   render() {
@@ -22,15 +23,31 @@ export default class Search extends React.PureComponent {
       font-size: 1.1rem;
     `;
 
+    const { handleSubmit, onSearch } = this.props;
+
+    const InputText = ({ input }) => (
+      <Input
+        type="text"
+        placeholder="Ex. Gatitos"
+        value={input.value}
+        onChange={event => input.onChange(event.target.value)}  
+      />
+    );
+
     return (
       <Card p={2} px={3} my={4}>
-        <Label>Search: </Label>
-        <Input ref={this.searchInput} type="text" placeholder="Ex. Gatitos" />
-        <Button
-          bg="magenta"
-          onClick={() => this.props.onSearch(this.searchInput.current.value)}
-        >Go</Button>
+        <form onSubmit={handleSubmit(onSearch)}>
+          <Label>Search: </Label>
+          <Field name="search" component={InputText} />
+          <Button
+            bg="magenta"
+          >Go</Button>
+        </form>
       </Card>
     );
   }
 }
+
+export default reduxForm({
+  form: 'search'
+})(Search);
