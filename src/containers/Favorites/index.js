@@ -16,7 +16,10 @@ export class Favorites extends React.PureComponent {
     return (
       <Layout heading="Favorites">
         <Search onSearch={onSearchFavorites} />
-        <FavoritesSection favorites={favorites} onAddRemoveFavorite={onAddRemoveFavorite} />
+        <FavoritesSection
+          favorites={favorites}
+          onAddRemoveFavorite={onAddRemoveFavorite}
+        />
       </Layout>
     );
   }

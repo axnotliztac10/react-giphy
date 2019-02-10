@@ -1,7 +1,7 @@
 import React from 'react';
 
 import GiphyCard from 'components/GiphyCard';
-import { Text, Box, Flex } from 'rebass';
+import { Text, Box, Flex, Link } from 'rebass';
 
 export default class SearchResultsSection extends React.PureComponent {
   renderResult = (result, index) => {
@@ -17,7 +17,7 @@ export default class SearchResultsSection extends React.PureComponent {
   }
 
   render() {
-    const { results } = this.props;
+    const { results, onLoadMore } = this.props;
 
     if (!results.length) {
       return null;
@@ -25,7 +25,7 @@ export default class SearchResultsSection extends React.PureComponent {
 
     return (
       <Box my={4}>
-        <Text textAlign="center" fontSize={22}>Results: </Text>
+        <Text textAlign="center" fontSize={22}>Results:</Text>
         <Flex
           flexDirection="row"
           justifyContent="center"
@@ -33,6 +33,9 @@ export default class SearchResultsSection extends React.PureComponent {
           flexWrap="wrap"
         >
           {results.map(this.renderResult)}
+          <Box width={1}>
+            <Link fontSize={30} onClick={() => onLoadMore()}>Load more</Link>
+          </Box>
         </Flex>
       </Box>
     );

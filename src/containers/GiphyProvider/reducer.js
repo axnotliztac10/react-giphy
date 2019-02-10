@@ -1,6 +1,7 @@
 import {
   GET_TRENDING_SUCCESS,
   GET_TRENDING_FAIL,
+  SEARCH_INIT,
   SEARCH_SUCCESS,
   SEARCH_FAIL,
   ADD_REMOVE_FAVORITE,
@@ -12,7 +13,8 @@ const initialState = {
   trendingList: [],
   searchList: [],
   searchPagination: {
-    count: 6,
+    currentSearch: '',
+    itemsPerPage: 6,
     offset: 0
   },
   trendingError: null,
@@ -50,6 +52,25 @@ export default (state = initialState, { type, payload }) => {
       return {
         ...state,
         trendingError: payload
+      };
+    case SEARCH_INIT:
+      const searchPagination = {
+        ...state.searchPagination,
+        currentSearch: payload.search
+      };
+      let searchList = [];
+
+      if (payload.search === state.searchPagination.currentSearch) {
+        searchPagination.offset += state.searchPagination.itemsPerPage;
+        searchList = [...state.searchList];
+      } else {
+        searchPagination.offset = 0;
+      }
+
+      return {
+        ...state,
+        searchList: searchList,
+        searchPagination
       };
     case SEARCH_SUCCESS:
       return {

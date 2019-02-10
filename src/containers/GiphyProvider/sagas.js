@@ -1,5 +1,6 @@
-import { put, takeLatest, call } from 'redux-saga/effects';
+import { put, takeLatest, call, select } from 'redux-saga/effects';
 
+import { mapStateToProps as giphyState } from './withGiphy';
 import {
   getTrending,
   search
@@ -27,7 +28,11 @@ export function* getTrendingInitSaga() {
 
 export function* searchInitSaga({ payload }) {
   try {
-    const { data, pagination } = yield call(search, payload.search);
+    const { searchPagination } = yield select(giphyState);
+    const { data, pagination } = yield call(search, payload.search, {
+      offset: searchPagination.offset,
+      limit: searchPagination.itemsPerPage
+    });
 
     yield put(searchSuccess({
       data,

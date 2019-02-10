@@ -7,6 +7,6 @@ export function getTrending() {
   return request(`${apiHost}/trending?api_key=${apiKey}&limit=6`, {});
 }
 
-export function search(search) {
-  return request(`${apiHost}/search?api_key=${apiKey}&limit=6&q=${search}`, {});
+export function search(search, { limit, offset }) {
+  return request(`${apiHost}/search?api_key=${apiKey}&offset=${offset}&limit=${limit}&q=${search}`, {});
 }
